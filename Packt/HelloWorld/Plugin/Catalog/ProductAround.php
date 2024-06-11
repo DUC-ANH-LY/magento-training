@@ -1,0 +1,17 @@
+<?php
+namespace Packt\HelloWorld\Plugin\Catalog;
+
+use Magento\Catalog\Model\Product;
+
+class ProductAround
+{
+
+    public function aroundGetName($interceptedInput)
+    {
+        return "Name of product";
+    }
+    public function aroundGetPrice($interceptedInput)
+    {
+        return "price hihi";
+    }
+}

@@ -3,5 +3,6 @@
 <ul>
 <?php foreach ($block->getProducts() as $product): ?>
     <li><?php echo $product->getName() ?></li>
+    <li><?php echo $product->getPrice() ?></li>
 <?php endforeach; ?>
 </ul>
