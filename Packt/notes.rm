@@ -1,0 +1,8 @@
+Every Magento module has a version number that is stored in the module.xml file. When we
+look in the database table setup_module, we see the version numbers of every module.
+When running the command php bin/magento setup:upgrade, Magento will check, for
+every module, the version number in the module.xml file and the database table setup_
+module.
+If a module is not in the list, the InstallData.php script will be executed. After that, the
+UpgradeData.php script is always executed.
+With an if statement, we can manage what things need to be executed in a specific upgrade.
