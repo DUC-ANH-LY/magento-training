@@ -4,7 +4,7 @@
         <referenceBlock name="footer_links">
             <block class="Magento\Framework\View\Element\Html\Link\Current" name="helloworld-link">
                 <arguments>
-                    <argument name="label" translate="true" xsi:type="string">Helloworld landing</argument>
+                    <argument name="label" translate="true" xsi:type="string">Helloworld landing</argument>  
                     <argument name="path" xsi:type="string">helloworld/index/index</argument>
                 </arguments>
             </block>
