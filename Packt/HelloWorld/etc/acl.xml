@@ -8,13 +8,13 @@
                         <resource id="Packt_HelloWorld::index" title="HelloWorld index" />
                     </resource>
                 </resource>
-<!--                <resource id="Magento_Backend::stores">-->
-<!--                    <resource id="Magento_Backend::stores_settings">-->
-<!--                        <resource id="Magento_Config::config">-->
-<!--                            <resource id="Packt_HelloWorld::config_helloworld" title="HelloWorld Section" />-->
-<!--                        </resource>-->
-<!--                    </resource>-->
-<!--                </resource>-->
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Packt_HelloWorld::config_helloworld" title="HelloWorld Section" />
+                        </resource>
+                    </resource>
+                </resource>
             </resource>
         </resources>
     </acl>
