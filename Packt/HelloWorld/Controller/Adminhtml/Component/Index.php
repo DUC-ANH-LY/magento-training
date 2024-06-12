@@ -19,7 +19,7 @@ class Index extends \Magento\Backend\App\Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
-
+        
         $resultPage->setActiveMenu('Packt_HelloWorld::component');
         $resultPage->addBreadcrumb(__('HelloWorld'), __('HelloWorld'));
         $resultPage->addBreadcrumb(__('Components'), __('Components'));
@@ -27,7 +27,7 @@ class Index extends \Magento\Backend\App\Action
 
         return $resultPage;
     }
-
+    
     protected function _isAllowed()
     {
         return $this->_authorization->isAllowed('Packt_HelloWorld::helloworld');
