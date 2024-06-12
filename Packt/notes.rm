@@ -6,3 +6,6 @@ module.
 If a module is not in the list, the InstallData.php script will be executed. After that, the
 UpgradeData.php script is always executed.
 With an if statement, we can manage what things need to be executed in a specific upgrade.
+
+https://www.thecoachsmb.com/display-data-from-database-on-frontend-in-magento2/
+https://www.mgt-commerce.com/tutorial/magento-eav-model/

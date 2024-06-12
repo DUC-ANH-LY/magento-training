@@ -3,7 +3,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
     <module name="Magenest_Movie" setup_version="1.0.5">
         <sequence>
-            <module name="Movie"/>
+            <module name="Module_Movie"/>
         </sequence>
     </module>
 </config>

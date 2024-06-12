@@ -13,18 +13,18 @@ class Collection extends \Magento\Framework\App\Action\Action
                 'image',
             ])
             ->addAttributeToFilter('entity_id', array(
-                'in' => array(1, 2, 3)
+                'in' => array(159, 160, 161)
             ));
-
+        
         $output = '';
-
+        
         $productCollection->setDataToAll('price', 20);
 
         foreach ($productCollection as $product) {
-            print_r($product->getData());
-            echo "<br>";
+            $output .= \Zend_Debug::dump($product->debug(), null, false);
         }
-//        $this->getResponse()->setBody($output);
+
+        $this->getResponse()->setBody($output);
     }
 
 }
