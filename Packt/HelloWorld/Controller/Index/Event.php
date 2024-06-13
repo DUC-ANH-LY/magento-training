@@ -1,7 +1,7 @@
 <?php
 namespace Packt\HelloWorld\Controller\Index;
 
-class Index extends \Magento\Framework\App\Action\Action
+class Event extends \Magento\Framework\App\Action\Action
 {
     /** @var \Magento\Framework\View\Result\PageFactory  */
     protected $resultPageFactory;
@@ -13,9 +13,18 @@ class Index extends \Magento\Framework\App\Action\Action
         $this->resultPageFactory = $resultPageFactory;
         parent::__construct($context);
     }
+
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
+
+        $parameters = [
+            'product' => $this->_objectManager->create('Magento\Catalog\Model\Product')->load(2),
+            'category' => $this->_objectManager->create('Magento\Catalog\Model\Category')->load(1),
+        ];
+
+        $this->_eventManager->dispatch('helloworld_register_visit', $parameters);
+
         return $resultPage;
     }
 }
