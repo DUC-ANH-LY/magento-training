@@ -28,6 +28,16 @@
                     <label>YN</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
+
+                <field id="reload_page" translate="button_label" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label/>
+                    <button_label>Test Connection</button_label>
+                    <frontend_model>Magento\AdobeStockAdminUi\Block\Adminhtml\System\Config\TestConnection</frontend_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+
             </group>
         </section>
     </system>
