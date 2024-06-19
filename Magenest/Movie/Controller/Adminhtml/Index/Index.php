@@ -1,12 +1,12 @@
 <?php
-namespace Packt\HelloWorld\Controller\Adminhtml\Index;
+namespace Magenest\Movie\Controller\Adminhtml\Index;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 
 class Index extends \Magento\Backend\App\Action
 {
-    protected $resultPageFactory;
+    public $resultPageFactory;
 
     public function __construct(
         Context $context,
@@ -19,12 +19,13 @@ class Index extends \Magento\Backend\App\Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
-
+//        $resultPage->setActiveMenu('Magenest_Movie::grid_list');
+//        $resultPage->getConfig()->getTitle()->prepend(__('Grid List'));
         return $resultPage;
     }
-    
-    protected function _isAllowed()
-    {
-        return $this->_authorization->isAllowed('Packt_HelloWorld::index');
-    }
+
+//    protected function _isAllowed()
+//    {
+////        return $this->_authorization->isAllowed('Packt_HelloWorld::index');
+//    }
 }
