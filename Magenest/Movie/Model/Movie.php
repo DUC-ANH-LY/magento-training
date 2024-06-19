@@ -2,20 +2,25 @@
 
 namespace Magenest\Movie\Model;
 
-class Movie extends \Magento\Framework\Model\AbstractModel
+use Magenest\Movie\Api\Data\MovieInterface;
+
+class Movie extends \Magento\Framework\Model\AbstractModel implements MovieInterface
 {
-    public function __construct(
-        \Magento\Framework\Model\Context $context,
-        \Magento\Framework\Registry $registry,
-        \Magento\Framework\Model\ResourceModel\AbstractResource $resource = null,
-        \Magento\Framework\Data\Collection\AbstractDb $resourceCollection = null,
-        array $data = []
-    ) {
-        parent::__construct($context, $registry, $resource, $resourceCollection, $data);
-    }
 
     public function _construct()
     {
         $this->_init('Magenest\Movie\Model\ResourceModel\Movie');
+    }
+
+    public function getMovieId()
+    {
+        // TODO: Implement getEntityId() method.
+        return $this->getData(self::MOVIE_ID);
+    }
+    public function getName()
+    {
+        // TODO: Implement getTitle() method.
+        return $this->getData(self::NAME);
+
     }
 }
