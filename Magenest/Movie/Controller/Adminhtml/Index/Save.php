@@ -30,6 +30,7 @@ class Save extends \Magento\Backend\App\Action
         try {
             $rowData = $this->gridFactory->create();
             $rowData->setData($data);
+            $this->_eventManager->dispatch('before_save_movie', ['data_obj' => $rowData]);
             $rowData->save();
             $this->messageManager->addSuccess(__('Row data has been successfully saved.'));
         } catch (\Exception $e) {

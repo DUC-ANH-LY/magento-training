@@ -3,4 +3,8 @@
     <event name="adminhtml_customer_prepare_save">
         <observer name="change_first_name" instance="Magenest\Movie\Observer\ChangeFirstName" />
     </event>
+
+     <event name="before_save_movie">
+        <observer name="change_movie_rating" instance="Magenest\Movie\Observer\ChangeMovieRating" />
+    </event>
 </config>
