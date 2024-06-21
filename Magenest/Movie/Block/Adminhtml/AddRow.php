@@ -16,7 +16,6 @@ class AddRow extends \Magento\Backend\Block\Widget\Form\Container
         parent::__construct($context, $data);
     }
 
-
     protected function _construct()
     {
         $this->_objectId = 'row_id';
